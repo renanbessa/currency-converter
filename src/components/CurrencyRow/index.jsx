@@ -10,6 +10,7 @@ const CurrencyRowPropTypes = {
 
 export const CurrencyRow = (props) => {
   const { rates, selectedCurrency, onChangeCurrency, onChangeAmount, amount } = props;
+  console.log(amount);
 
   return (
     <div>

@@ -16,7 +16,7 @@ function App() {
   let fromAmount, toAmount;
   if (amountInFromCurrency) {
     fromAmount = amount;
-    toAmount = amount * exchangeRate;
+    toAmount = parseFloat(amount * exchangeRate).toFixed(2);
   } else {
     toAmount = amount;
     fromAmount = amount / exchangeRate;
