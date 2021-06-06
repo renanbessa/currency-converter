@@ -16,7 +16,7 @@ function App() {
   let fromAmount, toAmount;
   if (amountInFromCurrency) {
     fromAmount = amount;
-    toAmount = parseFloat(amount * exchangeRate).toFixed(2);
+    toAmount = amount * exchangeRate;
   } else {
     toAmount = amount;
     fromAmount = amount / exchangeRate;
@@ -74,7 +74,7 @@ function App() {
         selectedCurrency={fromCurrency}
         onChangeCurrency={(e) => setFromCurrency(e.target.value)}
         onChangeAmount={handleFromAmountChange}
-        amount={fromAmount}
+        amount={fromAmount.toString() || fromAmount}
       />
       <div className="equals">=</div>
       <CurrencyRow
@@ -82,7 +82,7 @@ function App() {
         selectedCurrency={toCurrency}
         onChangeCurrency={(e) => setToCurrency(e.target.value)}
         onChangeAmount={handleToAmountChange}
-        amount={toAmount}
+        amount={toAmount.toString() || toAmount}
       />
     </div>
   );

@@ -5,7 +5,7 @@ const CurrencyRowPropTypes = {
   selectedCurrency: PropTypes.string,
   onChangeCurrency: PropTypes.func.isRequired,
   onChangeAmount: PropTypes.func.isRequired,
-  amount: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
 };
 
 export const CurrencyRow = (props) => {
